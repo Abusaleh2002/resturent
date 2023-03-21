@@ -18,7 +18,10 @@ $(function(){
         $("html, body").scrollTop(0)
 
     })
-
+  //navbar
+  $('.navbar-custom').click(function(){
+    $('.navbar-section').addClass('nav_bg')
+  })
     
 })
 
@@ -26,6 +29,8 @@ $(function(){
 
 
 // Jquery........
+// Wow function for annimation dely
+new WOW().init();
 
 // Typed js
 var typed = new Typed('.animat', {
@@ -58,6 +63,5 @@ $(function(){
 })
 
 
-// Wow function for annimation dely
-new WOW().init();
+
 

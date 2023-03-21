@@ -1,7 +1,8 @@
 /* Beatles Project*/
 /* Google Font* */
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gentium+Book+Basic:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 /* Common CSS */
 * {
@@ -15,13 +16,11 @@ img {
 }
 
 p,
-ul,
 a,
-li,
 span {
     padding: 0px;
     margin: 0px;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Lato', sans-serif;
     text-decoration: none;
     list-style: none;
 
@@ -35,15 +34,18 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: 'Oswald', sans-serif;
-
+    font-family: 'Yeseva One', cursive;
 }
-
+ul,
+li,
+ul li a{
+    font-family: 'Gentium Book Basic', serif; 
+}
 :root {
     --btn_color: #0771b9;
     --bg_color: #0771b9;
     --icon_bg: #5bc5f3;
-    --head-text: #353535;
+    --head-text: #cc9900;
     --service_bg: #f1f1f1;
 }
 
@@ -72,27 +74,30 @@ h6 {
 
 /*weccome-section end */
 /* Back To top  Start*/
+
 .back_to_top{
     display: none;
     position: fixed;
     bottom: 20px;
-    left: 20px;
+    right
+    : 20px;
+    z-index: 1;
 }
 .back_to_top i{
     font-size: 20px;
+    color:var(--head-text);
 }
 /* Back To top */
 /*Navbar-section end */
-.navbar-section{
-    z-index: 1;
-    background:whitesmoke;
-
-}
+ .nav_bg{
+    background-color:var(--head-text);
+ }
 .nav_bg_chang{
-    background: var(--bg_color);
+    background: var(--head-text);
     position: sticky;
     top: 0;
     transition: 1s;
+    z-index: 1;
 }
 .nav_bg_chang .nav-link.active{
     color: white;
@@ -101,21 +106,20 @@ h6 {
 .nav_bg_chang .nav-link{
     color: white;
 }
-.white_logo{
-    display: none;
+
+.navbar-section ul li{
+    list-style: none;
 }
-.nav_bg_chang .white_logo{
-    display: block !important;
+.navbar-section ul li a{
+    color: white;
+    font-size: 15px;
 }
-.nav_bg_chang .main_logo{
-    display: none !important;
-}
-.navbar-section ul li a .active {
-    color: var(--bg_color);
+.navbar-section ul li .active {
+    color: white;
 }
 
 .navbar-section ul li a:hover {
-    color: var(--btn_color);
+    color:white;
 
 
 }
@@ -125,23 +129,16 @@ h6 {
 /*Hero-section start */
 .hero-section {
     padding: 80px 0px;
-    background: url(https://i.postimg.cc/k4ZL6KTx/hero.jpg) no-repeat center center;
-
+    background: url(https://i.postimg.cc/bw7sYQgf/bannar.jpg) no-repeat center center;
+margin-top: -170px;
     background-size: cover;
     background-attachment: scroll;
 }
-
-.hero-section .btn-div a {
-    margin-top: 20px;
-    font-size: 15px;
-    padding: 10px 20px;
-    text-decoration: none;
-    color: white;
-    border-radius: 0%;
-    background-color: var(--btn_color);
-    text-transform: uppercase;
-    font-weight: bold;
+.bannar_h1{
+    margin-top: 200px;
+    font-size: 3rem;
 }
+
 
 .hero-section .btn-div a:hover {
 
@@ -153,7 +150,14 @@ h6 {
 
 
 /*about-section start */
-
+.about-section {
+    background: url(https://i.postimg.cc/Z5FSGpWq/background.jpg) no-repeat center center;
+    background-size: cover;
+    background-attachment: scroll;
+}
+.about-section h2{
+    color: var(--head-text);
+}
 .about-section {
     padding: 80px 0px;
 }
@@ -161,286 +165,191 @@ h6 {
 /*about-section end */
 
 
-/*service-section start */
-
-.servise-section .main-div {
-    padding: 10px;
-    text-align: center;
-    background: var(--service_bg);
-    border-radius: 5px;
-    box-shadow: 0px 0px 5px rgb(199, 188, 188);
+/*ingredients_section start */
+.ingredients_section {
+    background: url(https://i.postimg.cc/7hF9DKBJ/ingradent-BG.jpg) no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
 }
-
-.servise-section .main-div .icon-div1 img {
-    border: 2px solid rgb(255, 255, 255);
-    border-radius: 50%;
-    padding: 12px 16px;
-    margin-top: 4px;
+.ingredients_section h2{
+    color:white;
 }
-
-.servise-section .main-div .icon-div2 .img {
-    width: 93%;
-    margin: auto;
-    border: 2px solid rgb(255, 255, 255);
-    padding: 11px 2px;
-    margin-top: 4px;
-    border-radius: 50%;
+.ingredients_section p{
+    color:white;
+    line-height: 1.5rem;
 }
+ 
 
-.servise-section .main-div .icon-div3 .img {
-    width: 93%;
-    margin: auto;
-    border: 2px solid rgb(255, 255, 255);
-    padding: 14px 4px;
-    margin-top: 4px;
-    border-radius: 50%;
+/*ingredients-section end */
+
+
+/*menu-section start */
+.menu_section {
+    background: url(https://i.postimg.cc/Z5FSGpWq/background.jpg) no-repeat center center;
+    background-size: cover;
+    background-attachment: scroll;
+   
 }
-
-.servise-section .main-div .icon-div1,
-.servise-section .main-div .icon-div2,
-.servise-section .main-div .icon-div3 {
-    width: 80px;
-    height: 80px;
-    margin: auto;
-    border-radius: 50%;
-    border: 4px solid white;
-    margin-top: -50px;
-    background: var(--service_bg);
-
-}
-
-.servise-section .main-div .icon-div1:hover {
-    background: var(--icon_bg);
-}
-
-.servise-section .main-div .icon-div2:hover {
-    background: var(--icon_bg);
-}
-
-.servise-section .main-div .icon-div3:hover {
-    background: var(--icon_bg);
-}
-
-.servise-section .main-div:hover .text-div h3 {
-    color: var(--icon_bg);
-}
-
-.servise-section .main-div .text-div h3 {
+.menu_section h2{
     color: var(--head-text);
-    margin-top: 10px;
 }
-
-.servise-section .main-div .text-div p {
-    font-size: 14px;
-    margin-top: 10px;
-
+.menu_section img{
+margin: 0 auto;
 }
-
-/*service-section end */
-
-
-/*portfolio-section start */
-.portfolio-section {
-    margin-top: 80px;
-    margin-bottom: 80px;
-}
-
-.portfolio-section .main-div {
-    width: 100%;
-
-    position: relative;
-}
-
-.portfolio-section .icon-div {
-    background: rgba(0, 0, 0, 0.466);
+.menu_section .text_div{
     display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    visibility: hidden;
+    justify-content: space-between;
+    width: 65%;
+    margin: 0 auto;
 }
-
-.portfolio-section .main-div:hover .icon-div {
-
-
-    transition: 1s;
-    opacity: 1;
-    visibility: visible;
-}
-
-.portfolio-section .icon-div a {
-    padding: 15px;
-    border-radius: 50%;
-    border: 1px solid white;
-    font-size: 18px;
-    font-weight: bold;
-    color: white;
-}
-
-.portfolio-section .icon-div a:hover {
-
-    border: 1px solid white;
-    transform: scale(1.2);
-    transition: .5s;
-    color: white;
-    background: var(--icon_bg);
-}
-
-
-
-/*portfolio-section end */
-
-/*team-section start */
-.team-section {
-
-    margin-bottom: 80px;
-}
-
-.team-section .main-div {
-    width: 100%;
-
-    position: relative;
-}
-
-.team-section .icon-div {
-    background: rgba(0, 0, 0, 0.466);
-
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 33%;
-    height: 100%;
-    opacity: 0;
-    visibility: hidden;
-}
-
-.team-section .main-div:hover .icon-div {
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    transition: 1s;
-    opacity: 1;
-    visibility: visible;
-}
-
-.team-section .icon-div a {
-    margin: 8px 0px;
-    padding: 10px;
-    border-radius: 50%;
-    border: 1px solid white;
-    font-size: 14px;
-    font-weight: bold;
-    color: white;
-}
-
-.team-section .icon-div a:hover {
-
-    border: 1px solid white;
-    transform: scale(1.2);
-    transition: .5s;
-    color: white;
-    background: var(--icon_bg);
-}
-
-
-
-/*portfolio-section end */
-
-
-/*testimonial-section start */
-.testimonial-section {
-    margin-bottom: 80px;
-}
-
-.testimonial-section .main-div {
-    padding: 10px;
-    text-align: center;
-    background: var(--service_bg);
-    border-radius: 5px;
-    box-shadow: 0px 0px 5px rgb(199, 188, 188);
-    position: relative;
-    margin-top: 20px;
-}
-
-.testimonial-section .main-div .icon-div {
-    width: 0;
-    height: 0;
-    border-left: 20px solid transparent;
-    border-right: 20px solid transparent;
-    border-bottom: 20px solid var(--service_bg);
-    position: absolute;
-    top: -20px;
-    left: 45%;
-
-}
-
-.testimonial-section .main-div .text-div h4 {
+.menu_section .text_div a{
     color: var(--head-text);
-    margin-top: 20px;
-line-height: 0;}
+    font-size: 20px;
+    font-weight: bold;
 
-.testimonial-section .main-div .text-div p {
+}
+.menu_section hr{
+    color: var(--head-text);
+    width: 65%;
+    margin: 0 auto;
+    
+}
+.menu_section p{
+    width: 65%;
+    margin: 0 auto;
     font-size: 14px;
-    font-family: 'Oswald', sans-serif;
-    font-weight: 300;
+    
 }
 
-.testimonial-section .main-div .text-div span {
-    font-size: 12px;
+/* menu_section special-menu ........*/
+.special-menu .text_div{
+    width: 95%;
 }
+.special-menu hr{
+    width: 95%;
+}
+.special-menu p{
+    width: 95%;
+}
+.special-menu{
+    position: relative;
+    border: 1px solid var(--head-text);
+    width: 70%;
+    margin: 0 auto;
+}
+.special_text{
+    position: absolute;
+    top: -17px;
+    right: -1px;
+    background-color: var(--head-text);
+    color: white;
+   
 
-.testimonial-section .main-div .star-div a {
+}
+.special_text p{
     font-size: 10px;
-
+    padding: 1px 12px;
 }
 
-/*testimonial-section end */
+
+/*menu-section end */
+
+
+/*reviews_section start */
+.reviews_section{
+    background: url(https://i.postimg.cc/GtzBfWLX/reviews-BG.jpg) no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.reviews_section h2{
+    color:white;
+}
+.reviews_section h6{
+    color:white;
+    line-height: 1.5rem;
+    width: 90%;
+    margin: 0  auto;
+    line-height: 2rem;
+}
+.reviews_section p{
+    color:white;
+    line-height: 1.5rem;
+    width: 90%;
+    margin: 0  auto;
+}
+.reviews_section .img_div{
+    width: 100px;
+    margin-right:-25px ;
+    margin-top: -10px;
+}
+
+
+/*ingredients-section end */
+
+
+/*form-section start */
+.form-section {
+    background: url(https://i.postimg.cc/Z5FSGpWq/background.jpg) no-repeat center center;
+    background-size: cover;
+    background-attachment: scroll;
+}
+.form-section p{
+    font-size: 14px;
+}
+.form-section h2{
+    color: var(--head-text);
+}
+.form-section .button_div{
+  
+    margin: 0 auto;
+    text-align: center;
+}
+.form-section .button_div button{
+    background-color: var(--head-text);
+    padding: 7px 60px;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 10px;
+    color: white;
+}
+.form-section {
+    padding: 80px 0px;
+}
+.form-section .label{
+    color:var(--head-text);
+    font-size: 15px;
+    font-weight: bold;
+}
+.form-section select{
+    font-size: 15px;
+    font-style: italic;
+}
+.form-section form input::placeholder{
+    font-style: italic;
+}
+
+.form-section form input:hover{
+   border: var(--head-text);
+}
+
+/*form-section end */
+
+
+
+
 
 
 /*Footer-section start */
 
-.footer-section .text-div p{
-    font-size: 14px;
+.footer-section .icon_div i{
+    font-size: 18px;
+    padding: 2px 5px;
+    color: white;
+    margin: 0 2px;
 
 }
-.footer-section .main-div{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    margin-top: 25px;
-}
-.footer-section .icon-text-div a{
-    font-size: 15px;
-    color: white;
-}
-.footer-section .icon-text-div a:hover{
-    font-weight: bold;
-    color:var(--icon_bg);
-}
-.footer-section .icon-div a{
-    padding: 10px;
-    border: 1px solid white;
-    border-radius: 50%;
-    background: var(--icon_bg);
-    font-size: 20px;
-    color: white;
-}
-.footer-section ul li a{
-    
-    font-size: 14px;
-    color: white;
-}
-.copy-text span{
-   color: var(--icon_bg);
-    
-}
+
 
 /*Footer-section end */
+
+
